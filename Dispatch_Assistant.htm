@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: Dispatch Assistant</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: Dispatch Assistant</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: Dispatch Assistant
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">Dispatch Assistant</div>						
+			<div><a href="aliController911.htm">911 Server and Workstation</a></div>		
+            <div><a href="eRequest.htm">eRequest</a></div>
+            <div><a href="notification.htm">Universal Notification</a></div>
+            <div><a href="udl.htm">Universal Data Loader</a></div>
+            <div><a href="ude.htm">Universal Data Exporter</a></div>
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="Wires.htm">Money/Wires</a></div>						
+            <div><a href="FM2000.htm">Fleet Management 2000</a></div>
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    Introduction
+                </div>
+                <p>Our customers who did not have a need for data applications still had drivers out there 
+				   with a digital radios installed in their vehicle.  Given that these radios were fairly 
+				   expensive, it made sense that the customers should get as much out of them as possible.
+				   The goal was to reduce the amount of time the operators needed to spend talking to the 
+				   drivers and vice versa.  The reason for that was fairly selfish.  Data customers paid more.
+				   However, voice customers took up a lot of bandwidth. The trick was to reduce the amount of 
+				   bandwidth used by voice customers (while not alienating them), so more space is available to 
+				   bring on data customers.
+				</p>
+				
+                <div class="article-title">
+                    What It Does
+                </div>				
+                <p>Since the radios possessed some rudimentary messaging and statusing capabilities, we 
+				   decided to write an application based on these features.  
+				   Dispatch Assistant allows the dispatch operator to send and receive statuses and simple 
+				   messages.  In addition, it allows group calls.  So, for instance, the operator can broadcast 
+				   a status or a message to all drivers.  The drivers can send statuses back to let the 
+				   front office know what is going on with them.  
+				</p>
+				  
+			    <p>The profile of the target customer was someone who has a little bit experience 
+				   using computers.  The interface was designed so that all the operations could 
+				   be carried out using a mouse.  As such, we strove to create an application 
+				   that put simplicity above all else. As a result, the application was well 
+				   received and managed to significantly reduce the voice traffic on the system.
+				</p>
+                <div class="article-title">
+                    How It Works
+                </div>
+				<p>Dispatch Assistant is an application that is easy to 
+			      use because the interface is simple. The dispatch operator sends 
+				  statuses the meaning of which has been previously defined to the 
+				  drivers.  The drivers send statuses back.  In addition, the 
+				  dispatchers can initiate a voice calls.  All the information is compiled 
+				  into a series of reports that can be generated at will. 
+				</p>
+                <div class="article-title">
+                    Technologies Involved
+                </div>				
+			    <p>Dispatch Assistant was written in Visual Basic 5.&nbsp; 
+				  It used a local Microsoft Access MDB file to store all the data.  
+				  The reports were generated using vsReports package.  The Wireless Serial Layer facilitated 
+				  access to the radio network.  The database was accessed via DAO 3.51.
+				  Many of the features were reused from the Dispatch Express application, which 
+				  was developed prior.  Because of the component reuse methodology, Dispatch Assistant 
+				  was delivered a full month before the deadline with associated monetary savings.
+				</p>
+                <div class="article-title">
+                    Screenshots
+                </div>	
+				
+				<p>
+					<img src="images/DispatchAssistant_Main.png" alt="Main application screen."/>
+				</p>
+				<div class="ScreenshotCaption">Main application screen.</div>
+				
+				
+				<p>
+				   <img src="images/DispatchAssistant_VehicleManager.png" alt="Vehicle Manager"/>
+				</p>
+				<div class="ScreenshotCaption">Vehicle Manager</div>
+
+				<p>
+				   <img src="images/DispatchAssistant_SendStatus.png" alt="Example of sending a status message"/>
+				</p>
+				<div class="ScreenshotCaption">Example of sending a status message</div>
+				
+				<p>
+				   <img src="images/DispatchAssistant_AlphaTag.png" alt="Alpha-tagging a vehicle"/>
+				</p>
+				<div class="ScreenshotCaption">Alpha-tagging a vehicle</div>
+		
+				<p>
+				   <img src="images/DispatchAssistant_ReportPrintPreview.png" alt="Print-preview for a Report"/>
+				</p>
+				<div class="ScreenshotCaption">Print-preview for a Report</div>
+				
+				
+				
+				
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

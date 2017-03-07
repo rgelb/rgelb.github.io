@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: Fleet Management 2000</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: Fleet Management 2000</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: Fleet Management 2000
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">Fleet Management 2000</div>						
+			<div><a href="aliController911.htm">911 Server and Workstation</a></div>		
+            <div><a href="eRequest.htm">eRequest</a></div>
+			<div><a href="CodeGen.htm">Universal Notification</a></div>			
+            <div><a href="udl.htm">Universal Data Loader</a></div>
+            <div><a href="ude.htm">Universal Data Exporter</a></div>			            
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="Wires.htm">Money/Wires</a></div>			
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            <div><a href="Dispatch_Assistant.htm">Dispatch Assistant</a></div>						            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    Introduction
+                </div>
+                <p>The basic need to establish a vehicle's location is important today 
+				   with emphases on efficiencies in fuel, employee time, employee safety and loss prevention. 
+				   This requires expanded features in software, including user-defined alarm or message functions. 
+				   Vehicle operation characteristics can also be tied into AVL (automatic vehicle location) information. 
+				   In addition, the system allows data downloads to create fleet activity reports.
+				</p>
+				<p>
+					Fleet Management 2000, in large measure, was created to address these needs.  It supports vector maps, 
+					locates addresses and finds the closest vehicle to a target location. It allows customization of maps 
+					with buildings, boundaries and address points, and it can be set to search for street intersections. 
+					The software can change the color of displayed vehicle icons to correspond with status messages 
+					and activate an alarm when a vehicle is speeding, inactive or stopped. Alarms can also be 
+					triggered if a fleet vehicle is out of its assigned territory, or just off-route. 
+					Even collisions can be linked back to the alarm system.  The system has so many features
+					to match so many customer requests that its Options screen had to be rewritten 
+					several times just to deal with the preferences overload.								
+				</p>
+				<p>
+					Out of all the applications I've written, this one has probably received the largest international
+					exposure of all.  There is a multitude of reasons, but one of key ones is that in 
+					addition to digital vector maps, it supported 
+					bitmapped maps.  Vector maps are not readily available outside US, thus any one could just scan 
+					a paper map, plop down latitude/longitude information and track vehicles in 5 minutes.  Another 
+					reason, is the low cost of GPS equipment.  And yet another, is that Fleet Management 2000 was an 
+					excellent application.  
+				</p>
+				
+				<p>
+					One of the features that customers used over and over again is vehicle movement replay (screenshot below).
+					Among other features were GPS Differential Correction, Management by Exception, Vehicle Boundaries 
+					(i.e. generates an alarm if vehicle enters and/or leaves the geographic boundary), 
+					Vehicle Routes, Address Search, Place Search, Street Intersection Search, Variable GPS Update 
+					Rates, Timed GPS Queries, Modem Buffering (buffering info on the mobile device and sending 
+					all the info at once on que) and many others.
+				</p>
+				
+                <div class="article-title">
+                    Mapping
+                </div>				
+				<p>
+					Fleet Management 2000 provided a set of mapping tools that was unmatched at the time.
+					Users could utilize it out of the box or customize it to their particular needs.  We've taken 
+					the ESRI MapObjects rendering engine as far as it could go to create an extraordinary 
+					presentation.  Screenshots below provide some idea of the map control.
+				
+				</p>
+				
+                <div class="article-title">
+                    3rd Party Integration
+                </div>				
+				<p>
+				    As a company we got the most mileage out of a 3rd Party Integration feature.  We had tons of 
+					requests from customers regarding various features that they wanted to see implemented.  These 
+					features may have been useful to a particular customer, but not useless for the other 99% of users.
+					So I exposed FM2000 via a 3rd Party API - this allowed customers to implement their own features 
+					on top of Fleet Management 2000.  We supplied a great set of documentation and as a result, all 
+					kinds of applications were integrated into Fleet Management (and the other way around).  One example of 
+					an application to take advantage of Fleet Management 2000 is <a href="Dispatch_Express">Dispatch Express</a>.
+				</p>
+				
+                <div class="article-title">
+                    Technologies Involved
+                </div>	
+				
+				<p>
+					This project was started in Visual Basic 2.  First it used a home grown mapping 
+					system utilizing bitmapped maps (there were few digital then).  Later on, we 
+					switched to digital maps GDT (they now supply maps for Microsoft MapPoint) and 
+					ESRI MapObjects for map rendering.  On the mobile side we used a variety a 
+					Data Express DE-2400 modem with a built-in GPS receiver.  As the project grew, 
+					it was being ushered through successive versions of Visual Basic, making its stop 
+					at version 6.  The key challenge was to keep map rendering performance 
+				</p>
+				<p>
+					Unfortunately, as often happened in the dotcom days, the company 
+					was getting bought and sold right and left.  Eventually, it lost its 
+					identity and the executives had larger fish to fry. 
+					<br />
+					<br />
+					
+					The pinnacle of the application was a port to a nationwide system of 
+					vehicle tracking.  The idea was to open up a nationwide map and see where all 
+					your vehicles were.  In addition, one could send text/voice messages via a click.
+					It is very similar to what Nextel has right now in 2003.  Unfortunately, that 
+					was not to be.  The last company that owned us imploded under the weight of 
+					its own mismanagement and Fleet Management 2000 pretty much ended its existance.
+				</p>				
+
+
+                <div class="article-title">
+                    Screenshots
+                </div>	
+				<p>
+					<img src="images/Fm2000_Map.png" alt="The map view in Fleet Management 2000"/>
+				</p>
+				<div class="ScreenshotCaption">The map view in Fleet Management 2000</div>
+				
+				<p>
+					<img src="images/Fm2000_IdentifyLocation.png" alt="Fleet Management 2000 allows users to identify a map location by clicking on a map"/>
+				</p>
+				<div class="ScreenshotCaption">Fleet Management 2000 allows users to identify a map location by clicking on a map</div>
+
+				<p>
+					<img src="images/Fm2000_Replay.png" alt="All GPS location information can be later replayed as in this screenshot"/>
+				</p>
+				<div class="ScreenshotCaption">All GPS location information can be later replayed as in this screenshot</div>
+
+				<p>
+					<img src="images/Fm2000_SearchFeatures.png" alt="Even though mapping was not the focus of the application, we provided great searching tools"/>
+				</p>
+				<div class="ScreenshotCaption">Even though mapping was not the focus of the application, we provided great searching tools</div>
+
+				<p>
+					<img src="images/Fm2000_VehicleManager.png" alt="Vehicle Manager allowed control over fleets"/>
+				</p>
+				<div class="ScreenshotCaption">Vehicle Manager allowed control over fleets</div>
+
+				<p>
+					<img src="images/Fm2000_FineMapControl.png" alt="Managers could really customize the maps down to color and font of the streets, parks, freeways, etc..."/>
+				</p>
+				<div class="ScreenshotCaption">Managers could really customize the maps down to color and font of the streets, parks, freeways, etc...</div>
+				
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

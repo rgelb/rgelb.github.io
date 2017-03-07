@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: Universal Data Exporter</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: Universal Data Exporter</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: Universal Data Exporter
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">Universal Data Exporter</div>						
+			<div><a href="aliController911.htm">911 Server and Workstation</a></div>		
+            <div><a href="eRequest.htm">eRequest</a></div>
+            <div><a href="notification.htm">Universal Notification</a></div>
+            <div><a href="udl.htm">Universal Data Loader</a></div>
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="Wires.htm">Money/Wires</a></div>			
+            <div><a href="FM2000.htm">Fleet Management 2000</a></div>
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            <div><a href="Dispatch_Assistant.htm">Dispatch Assistant</a></div>						
+            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    The Problem
+                </div>
+                <p>Deutsche Bank provides files to its partners and customers on regular basis.  Each 
+				   customer requires files in their own formats.  Before this project, it was done in 
+				   the following manner: users would somehow finegle the data from the database into Excel
+				   and then attempt to export it in whatever formats Excel allowed.  With the information 
+				   economy, the amount of files would have kept the staff buried.  An easier method 
+				   was needed.
+				</p>
+				
+                <div class="article-title">
+                    The Solution
+                </div>				
+                <p>Since this software is a companion piece to the <a href="udl.htm">Universal Data Loader</a>
+				   it made sense to use the same methodologies, the same user interface.  So, just like in UDL, 
+				   I provided a set of default export options, like Excel, Lotus 1-2-3, tab delimited, comma delimited, 
+				   whatever delimited, Microsoft Access, FoxPro, dBase, fixed length and some others.  For others, 
+				   I devised a system of plugins.  So if there was a file format that couldn't be 
+				   handled by the default filters, one could write little bit of code that handled it.  
+				   The export engine was modularized in libraries and is being used in other applications 
+				   around the bank.  I then placed a familiar Wizard-based user interface on top of the application.  
+				   So the usage of the application is fairly simple.  You select the data source (server, database, 
+				   a set of tables/views or a query), select how to order the data, select the output format, 
+				   map the data (including via translation logic) and export.  You have a chance to save this 
+				   mapping so you don't have to recreate the entire logic the next time.
+				
+				 </p>
+
+				
+                <div class="article-title">
+                    The Benefit
+                </div>
+				<p>Deutsche Bank now easily generates snapshots of its data is all kinds of formats
+				   for all kinds of partners and customers.
+				</p>
+                <div class="article-title">
+                    Technologies Involved
+                </div>	
+				
+				<ul>
+					<li>Language: Visual Basic 6</li>
+					<li>Features: Interface Implementation for contract enforcement between libraries</li>
+					<li>Data Access: ADO 2.5 for applicaions written in VB 6</li>
+					<li>RDBMS: Sybase Adaptive Server Enterprise 12.0</li>
+				</ul>
+
+                <div class="article-title">
+                    Screenshots
+                </div>	
+
+				<p>
+					<img src="images/DataExporter_StartScreen.png" alt="Startup screen.  Users can either pick a previously saved mapping or create a new one"/>
+				</p>
+				<div class="ScreenshotCaption">Startup screen.  Users can either pick a previously saved mapping or create a new one</div>
+
+				<p>
+					<img src="images/DataExporter_PickTablesToExport.png" alt="On this screen Users select the tables to export"/>
+				</p>
+				<div class="ScreenshotCaption">On this screen Users select the tables to export</div>
+
+				<p>
+					<img src="images/DataExporter_SelectFieldsToExport.png" alt="Next users pick which fields need to be in the exported file"/>
+				</p>
+				<div class="ScreenshotCaption">Next users pick which fields need to be in the exported file</div>				
+				
+				<p>
+					<img src="images/DataExporter_SetupExport.png" alt="This screen allows for export details such as sorting to be set up"/>
+				</p>
+				<div class="ScreenshotCaption">This screen allows for export details such as sorting to be set up</div>
+
+				<p>					
+					<img src="images/DataExporter_PickOutputFormat.png" alt="This screen lists available export formats"/>
+				</p>
+				<div class="ScreenshotCaption">This screen lists available export formats</div>
+				
+				<p>					
+					<img src="images/DataExporter_TranslationLogic.png" alt="Translation logic allows the data to be manipulated and formatted"/>
+				</p>
+				<div class="ScreenshotCaption">Translation logic allows the data to be manipulated and formatted</div>				
+				
+				<p>
+					<img src="images/DataExporter_DownloadProgress.png" alt="Export Progress"/>
+				</p>
+				<div class="ScreenshotCaption">Export Progress</div>
+
+				<p>
+					<img src="images/DataExporter_DownloadFinished.png" alt="Download finished.  A short summary of the download is shown"/>
+				</p>
+				<div class="ScreenshotCaption">Upload finished.  A short summary of the download is shown</div>
+				
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

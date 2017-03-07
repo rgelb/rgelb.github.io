@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: 911 Server and Workstation</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: 911 Server and Workstation</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: 911 Server and Workstation
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">911 Server and Workstation</div>						
+            <div><a href="eRequest.htm">eRequest</a></div>
+            <div><a href="notification.htm">Universal Notification</a></div>
+            <div><a href="udl.htm">Universal Data Loader</a></div>
+            <div><a href="ude.htm">Universal Data Exporter</a></div>
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="Wires.htm">Money/Wires</a></div>					
+            <div><a href="FM2000.htm">Fleet Management 2000</a></div>
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            <div><a href="Dispatch_Assistant.htm">Dispatch Assistant</a></div>						
+            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    Introduction
+                </div>
+                <p>One of the challenges faced by small and rural towns is that they 
+				   must provide the 911 services to its citizens, however, they must do so 
+				   with a small budget. This means they must have a call center and all the 
+				   appropriate equipment to handle the calls.  Most of the PSAP (means, what exactly???) 
+				   equipment is designed for large call and data centers, and appropriately costs 
+				   a lot of money.  Informer911 Corporation is attempting to fill the niche for 
+				   the small town call center by designing a system with a minimal up-front 
+				   investment while allowing to expand the system as needed.  For more in-depth 
+				   information, including more screenshots, please visit the website for this 
+				   <a href="http://www.informer911.com/products/ads/psap.html">product</a>.
+				   I was hired to design the software to interact with the hardware on the 
+				   back end and to write an application for the 911 all takers.
+				</p>
+				
+                <div class="article-title">
+                    Server-side Software
+                </div>				
+                <p>One fact I learned quickly is that the national 911 system is very badly outmoded.  The 
+					national phone number to address database lookup works over 9600 baud modem (!!!).  In addition, 
+					because of various laws (both local, state and federal), the 911 centers must keep 
+					loads of information handy.  This means that they already have a lot of existing sofware 
+					on hand to help them do that.  If you can't interact with this software, you won't make the sale.
+					Most of the existing software communicates with one another via either COM ports or TCP/IP.
+				</p>
+				
+				<p>					
+					The trick is to make a system that's flexible enough that it can interact just about any 
+					software, any data stream and do all this without a lot of technical expertise.  The solution 
+					to this problem was something we called Visual Parser &copy;.  It enabled the user on site
+					to parse and map incoming data tokens to any functionality available inside our server product.
+					On the flip side, the server package is also capable of generating outbound data stream where 
+					the same user can map various application functionality to outgoing data streams.
+				</p>
+				
+				<p>
+					These challenges aside, the software manages a multitude of COM ports, interacting with 
+					hardware and software alike, processing calls, forwards requests and system state information,
+					It helps call takers by taking care of all the nitty-gritty of their work.  It provides a 
+					multitude of analisys tools, allowing support personnel to dial in and look around the system.
+					In addition, the software offers direct access to the hardware via a terminal emulation conduit.
+				
+				</p>
+
+                <div class="article-title">
+                    Call Taker Software
+                </div>
+				<p>
+					Key requirement for the call taker software was to make the interface customizable and 
+					morphable.  Most of the time it should take up as little space as possible, while providing 
+					call takers with as much information as possible.  The rationale behind these requirement is that 
+					the call takes already have a lot of software on their desktop, such as mapping applications that 
+					take up most of the real estate.
+				</p>
+				
+				<p>
+					As a result, I went with a concept of "Panels".  The idea is to confine each major function 
+					of the application to a panel (essentially a docked window, but within the application) and this 
+					panel can be added or removed at will.  Panels allow the user to only show functionality that's 
+					necessary for the job, thus saving on screen real estate.				
+				</p>
+				<p>
+					The application allows the call taker to immediately see the address (or location, if 
+					calling from a cell phone) of the caller.  It can also transfer calls to other departments.  
+					If the call originates from a cell phone, the location of the caller can be continually tracked
+					by a process known as rebidding.  The conversations are recorded and can be replayed at will.  
+					TDD interface is provided for those who call in via this interface.  The application can 
+					also take over the ringing from the phone, allowing the users to set up different sounds 
+					for landline or wireless calls.  Multitude of options are available to customize the application 
+					to multi-vendor environment.
+				</p>
+				
+				
+                <div class="article-title">
+                    Technologies Involved
+                </div>	
+				
+				<ul>
+					<li>Language: Visual Basic 6</li>
+					<li>Serial Communications</li>
+					<li>Data Access: ALI Link databases</li>
+					<li>RS485 bus for Node to Node communications</li>
+				</ul>
+
+                <div class="article-title">
+                    Screenshots
+                </div>	
+				<p>
+					<img src="images/AliController_ApplicationScreen.png" alt="Application screen on the server side"/>					
+				</p>
+				<div class="ScreenshotCaption">Application screen on the server side</div>
+				
+				<p>
+					<img src="images/AliController_VisualParser.png" alt="Visual Parser allows the user to map inbound/outgoing data streams to application functionality"/>					
+				</p>
+				<div class="ScreenshotCaption">Visual Parser allows the user to map inbound/outgoing data streams to application functionality</div>
+
+				<p>
+					<img src="images/AliController_IwsApplication.png" alt="Call Taker Application.  Its slender appearance means more space for mapping applications"/>					
+				</p>
+				<div class="ScreenshotCaption">Call Taker Application.  Its slender appearance means more space for mapping applications</div>
+
+				<p>
+					<img src="images/AliController_TddTerminal.png" alt="TDD Terminal for communicating with hearing impared people"/>					
+				</p>
+				<div class="ScreenshotCaption">TDD Terminal for communicating with hearing impared people</div>
+
+				<p>
+					<img src="images/AliController_IwsOptions.png" alt="Both server-side and call taker software have a multitude of options"/>					
+				</p>
+				<div class="ScreenshotCaption">Both server-side and call taker software have a multitude of options</div>
+
+				
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

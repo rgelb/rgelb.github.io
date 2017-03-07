@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: Universal Data Loader</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: Universal Data Loader</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: Universal Data Loader
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">Universal Data Loader</div>						
+			<div><a href="aliController911.htm">911 Server and Workstation</a></div>		
+            <div><a href="eRequest.htm">eRequest</a></div>
+            <div><a href="notification.htm">Universal Notification</a></div>
+            <div><a href="ude.htm">Universal Data Exporter</a></div>
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="Wires.htm">Money/Wires</a></div>			
+            <div><a href="FM2000.htm">Fleet Management 2000</a></div>
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            <div><a href="Dispatch_Assistant.htm">Dispatch Assistant</a></div>						
+            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    Situation at hand
+                </div>
+                <p>Deutsche Bank receives thousands of files every month from various partners and 
+				   customers that have to be processed in a fairly speedy manner.  These files come 
+				   in various formats: from the old style unix files (that terminate with Ctrl-Z) to 
+				   Microsoft Excel to HTML.  In the past, programmers created C or C++ programs not only 
+				   for each format type, but for each variation on the type.  For instance, if you had 
+				   two tab delimited files with different number of fields, two C programs would be written 
+				   to handle them.  Then a user would run these C programs from the Unix shell.
+				</p>
+				
+                <div class="article-title">
+                    The Solution
+                </div>				
+                <p>Obviously, this may have been fine in the early ninetees, but with the amount 
+				   of files being received today, the situation was quickly getting out of hand.  
+				   I decided to architect the system in the way that would last for many years, yet would be flexible 
+				   enough to participate in other applications as a universal data loader engine.  
+				   Logically speaking, there are 3 parts to processing a foreign file into your own database:
+				   1. Read the file (Source).  2. Map the fields to your own fields  3.  Upload the data to the database (Target).
+				   I built in to the program support for reading most popular file formats 
+				   (Excel, Lotus 1-2-3, Microsoft Access, Tab Delimited, Comma Delimited, Whatever Delimited, 
+				   Fixed Length files, dBase, FoxPro, Paradox, HTML, etc...).
+				   One thing, however, was obvious.  I couldn't write filters for every conceivable 
+				   file type that may show up on the bank's door.  So I settled on a concept 
+				   of plugins for formats not handled natively by Universal Data Loader. 
+				   If a new format showed up, one could write a plugin to read it.  
+				 </p>
+				 <p>I also couldn't write one piece of code to upload data to multitude 
+				    of servers and databases around the bank (there are literally hundreds).  
+					Bank's infrastructure is highly heterogeneous, partly a result of mergers, purchases, etc...
+					There are Sybase servers, Microsoft SQL Servers, Oracle, etc... all 
+					with drivers of varying stability, availability, etc... For this reason, 
+					I settled on a concept of Target Plugins.  Target Plugin is a piece of 
+					code that contractually provides database upload services to the Universal Data Loader engine.					
+				</p>
+				
+				<p>Finally, there was the all important piece of code between the Data Source and the Data Target 
+				   that allowed to map fields from the source file to the database table or stored procedure. 
+				   In addition, one could transform/translate each individual field in the process.  For instance, 
+				   let's say, the source file has a date in the mm/dd/yy format, while we need it in the 
+				   yyyymmdd format.  Or let's say 0 in the source file means Y in our file, while 1 means N.
+				   The translation logic could easily handle these and much more complicated examples with 
+				   ease.  In the end, we had a system like this: <br/>
+				   <br/>
+				   
+				   Data Source/Plugin--->Field Mapping Engine--->Target Plugin--->Database Server<br/>
+				   <br/>
+				   All the pieces of this application are well modularized and wrapped as libraries.  The entire 
+				   affair was finished by placing a Wizard-based client/server interface to make it 
+				   easier for users to process data.
+				</p>
+				
+                <div class="article-title">
+                    The Benefit
+                </div>
+				<p>Maintanance of hundreds of C/C++ files was a nightmare.  Now it is a thing of the past.  
+				  Nowadays, the files is loaded via UDL in a simple manner:  user selects the file, file type, 
+				  where the file should be loaded, maps the source fields to the target fields and voila.  
+				  In addition, because all the pieces of UDL are wrapped as libraries, they are used 
+				  within other programs around the bank as well.  In addition, I provided generators that 
+				  essentially wrote plugins for you.  The lead for a new file format went from 2-3 man-months 
+				  to one man-day.
+				</p>
+                <div class="article-title">
+                    Technologies Involved
+                </div>	
+				
+				<ul>
+					<li>Language: Visual Basic 6</li>
+					<li>Features: Interface Implementation for contract enforcement between libraries</li>
+					<li>Data Access: ADO 2.5 for applicaions written in VB 6</li>
+					<li>RDBMS: Sybase Adaptive Server Enterprise 12.0</li>
+					<li>RDBMS: Microsoft SQL Server 7</li>					
+					<li>Database: Microsoft Access</li>										
+				</ul>
+
+                <div class="article-title">
+                    Screenshots
+                </div>	
+
+				<p>
+					<img src="images/DataLoader_StartScreen.png" alt="Startup screen.  Users can either pick a previously saved mapping or create a new one"/>
+				</p>
+				<div class="ScreenshotCaption">Startup screen.  Users can either pick a previously saved mapping or create a new one</div>
+
+				<p>
+					<img src="images/DataLoader_SelectSourceAndTarget.png" alt="On this screen Users select the source and the target of the data"/>
+				</p>
+				<div class="ScreenshotCaption">On this screen Users select the source and the target of the data</div>
+
+				<p>
+					<img src="images/DataLoader_DataPreview.png" alt="Next a preview of the data source is shown with various options"/>
+				</p>
+				<div class="ScreenshotCaption">Next a preview of the data source is shown with various options</div>
+
+				<p>					
+					<img src="images/DataLoader_TranslationLogic.png" alt="Translation logic allows the data to be manipulated and formatted"/>
+				</p>
+				<div class="ScreenshotCaption">Translation logic allows the data to be manipulated and formatted</div>
+
+				<p>
+					<img src="images/DataLoader_UploadProgress.png" alt="Upload Progress"/>
+				</p>
+				<div class="ScreenshotCaption">Upload Progress</div>
+
+				<p>
+					<img src="images/DataLoader_UploadFinished.png" alt="Upload finished.  A short summary of the upload is shown"/>
+				</p>
+				<div class="ScreenshotCaption">Upload finished.  A short summary of the upload is shown</div>
+				
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

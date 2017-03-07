@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: Money/Wires</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: Money/Wires</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: Money/Wires
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">Money/Wires</div>						
+			<div><a href="aliController911.htm">911 Server and Workstation</a></div>		
+            <div><a href="eRequest.htm">eRequest</a></div>
+            <div><a href="notification.htm">Universal Notification</a></div>
+            <div><a href="udl.htm">Universal Data Loader</a></div>
+            <div><a href="ude.htm">Universal Data Exporter</a></div>
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="FM2000.htm">Fleet Management 2000</a></div>
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            <div><a href="Dispatch_Assistant.htm">Dispatch Assistant</a></div>						
+            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    The Problem
+                </div>
+                <p>Deutsche Bank was having trouble processing wires in a timely and inexpensive manner.  
+				   The existing system provided for some automation, but required too much manual intervention 
+				   by employees. Tasks such as approving wires for transfer were taking up much of the day
+				   leaving other tasks unfinished and making wire processing a losing business for the bank.  The 
+				   bank was in a amazing situation of having to turn down business because it could barely handle 
+				   existing wires.  In addition, the employees were tired of basically running interference 
+				   all day long.  Clearly, a change was needed and it was needed fast.
+				</p>
+				
+                <div class="article-title">
+                    The Solution
+                </div>				
+                <p>Having understood the existing system, I made a decision to use my JobStream middleware
+				   platform to run what is a basically sequential process.  JobStream enabled me to pull 
+				   together all the disparate pieces of technology needed to process wires.  The application 
+				   provided a single entry point for wires via a web site.  Users (normally mortgage houses) 
+				   would upload a data file, then receive a confirmation tracking number.  The JobStream Job 
+				   would be scheduled for processing.  This job would process the file through 
+				   our database, running various validations.  Then, the generated data would be handed off 
+				   to yet another process that interacts with the Federal Reserve Bank.  
+				</p>
+				
+				<p>Because of acquisitions, Deutsche Bank has several locations in US that process wires.  
+				  Due to this situation, we used a series of loosely coupled applications to handle the 
+				  entire load. </p>
+
+                <div class="article-title">
+                    The Benefit
+                </div>
+				<p>The deployment of the application resulted in significant changes to the way wires are processed 
+				   within Deutsche Bank.  First of all, wire processing is the fastest-rising money earner 
+				   in the Deutsche Bank US subsidiary.  It is now a very profitable venture.  Secondly, the amount of 
+				   hand-holding by employees has been reduced dramatically.  Thirdly, since the application deployed, 
+				   we've been doubling the amount of wires processed every month (geometric progression!).
+				</p>
+                <div class="article-title">
+                    Technologies Involved
+                </div>	
+				
+				<ul>
+					<li>Language: Visual Basic 6</li>
+					<li>NT Services: C# and the .NET framework</li>
+					<li>Data Access: ADO 2.5 for applicaions written in VB 6</li>
+					<li>Data Access: ADO.NET for the .NET framework</li>
+					<li>RDBMS: Sybase Adaptive Server Enterprise 12.0</li>
+					<li>RDBMS: Microsoft SQL Server 7</li>					
+				</ul>
+
+                <div class="article-title">
+                    Screenshots
+                </div>	
+				<p>
+					<img src="images/WiresMoney_UploadScreen.png" alt="Users upload files through this screen"/>					
+				</p>
+				<div class="ScreenshotCaption">Users upload files through this screen</div>
+				
+				<p>
+				   <img src="images/WiresMoney_Report1.png" alt="Report 1 - Wires processed each day during a selected month"/>				   
+				</p>
+				<div class="ScreenshotCaption">Report 1 - Wires processed each day during a selected month</div>				
+
+				<p>
+				   <img src="images/WiresMoney_Report2.png" alt="Report 2 - Wires processed each hour during a selected day"/>				   
+				</p>
+				<div class="ScreenshotCaption">Report 2 - Wires processed each hour during a selected day</div>
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

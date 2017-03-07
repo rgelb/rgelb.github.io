@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gallery :: Applications by Robert Gelb :: eRequest</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1>Gallery :: Applications by Robert Gelb :: eRequest</h1>
+    <div id="breadcrumb">
+        <a href="index.htm">Home Page</a> :: eRequest
+    </div>
+    <div id="page">
+        <div id="menu">
+            <div class="SelectedMenu">eRequest</div>						
+			<div><a href="aliController911.htm">911 Server and Workstation</a></div>		
+            <div><a href="notification.htm">Universal Notification</a></div>
+            <div><a href="udl.htm">Universal Data Loader</a></div>
+            <div><a href="ude.htm">Universal Data Exporter</a></div>
+            <div><a href="CodeGen.htm">Web Application Code Generator</a></div>
+            <div><a href="Wires.htm">Money/Wires</a></div>									
+            <div><a href="FM2000.htm">Fleet Management 2000</a></div>
+            <div><a href="Dispatch_Express.htm">Dispatch Express</a></div>
+            <div><a href="Dispatch_Assistant.htm">Dispatch Assistant</a></div>						
+            
+        </div>
+        <div id="content">
+            <div class="article">
+                <div class="article-title">
+                    The Problem
+                </div>
+                <p>Loan Custody (that's what happens to your loan documents after you buy a house) 
+				   is not a business that the public associates with banking.  However, 
+				   for majors banks it is a profitable operation.  For some of them it is a very profitable
+				   proposition.  The problem with Deutsche Bank was that it had several million documents 
+				   sitting on the shelves.  Customers (usually mortgage or escrow brokers) would call or 
+				   fax the request (for either a copy, withdrawal, execution, ...) for a particular set of loans, 
+				   one of the employees would enter the data into a web application and submit a request to 
+				   process the loan documents.
+				</p>
+				<p>One of the problems with this scenarios is that the employees spent half the day reading faxes
+				   and entering the data into the existing web applications, instead of fulfilling customer's request.
+				   In addition, efforts to open up the existing application to the internet failed because of the 
+				   way the application was written. Number one, it was ASP session based.  This meant that if 
+				   more than several people were logged into the web site, it would become unbearably slow.  And because
+				   the entire application based on the Session technology, it would not be possible to update it 
+				   to the current methods without a significant rewrite.  So a decision was made to rewrite it.
+				</p>
+				
+                <div class="article-title">
+                    The Solution
+                </div>				
+                <p>The rewrite was done using the 
+				   <a href="http://www.vbrad.com/Articles/janmay01/art_aspless.htm">AspLess</a> methodology which guarantees ease of maintanance and 
+				   debugging, which in turn yields fast development time, less bugs and better performance.  
+				   Key employees were interviewed about their work flow, in an attempt to match the application with their 
+				   workflow.  The idea was to have the customers enter requests for documents as much as possible 
+				   via the internet to free up the employees to do useful work.  There was a benefit to the customers 
+				   as well.  No longer would they have to generate faxes, make phone calls (and be on hold), then call 
+				   again to see whether the request was fulfilled.  They would simply log on to the web site and track 
+				   their request, like people can track UPS or FedEx packages.  In addition, a series of reports was 
+				   created to better gauge system response time, to monitor and mine data.
+				   
+				   This was also the first application, where I've implemented data-entry-friendly features of 
+				   Mozilla Firebird browser, such as type-ahead lookup.  So, those employees using this browser 
+				   are able to speed through the data entry part much faster than others.
+				</p>
+		
+
+                <div class="article-title">
+                    The Benefit
+                </div>
+				<p>
+				   eRequest has managed to speed up loan processing by identifying bottlenecks in the previous system, 
+				   by using data entry features and by paying close attention to detail.  As a result, Loan Custody 
+				   is a very profitable business for Deutsche Bank.
+				   
+				</p>
+                <div class="article-title">
+                    Technologies Involved
+                </div>				
+				
+				<ul>
+					<li>Language: Visual Basic 6</li>
+					<li>Reports: Crystal Reports 8</li>
+					<li>Data Access: ADO 2.5</li>
+					<li>RDBMS: Sybase Adaptive Server Enterprise 12.0</li>
+				</ul>
+				
+                <div class="article-title">
+                    Screenshots
+                </div>	
+				<p>
+					<img src="images/eRequest_SearchScreen.png" alt="The search screen for loans and documents"/>					
+				</p>
+				<div class="ScreenshotCaption">The search screen for loans and documents</div>
+				
+				<p>
+					<img src="images/eRequest_SearchLoans.png" alt="The result of the search for loans"/>					
+				</p>
+				<div class="ScreenshotCaption">The result of the search for loans</div>
+
+				<p>
+					<img src="images/eRequest_SearchDocs.png" alt="The result of the search for documents"/>					
+				</p>
+				<div class="ScreenshotCaption">The result of the search for documents</div>
+				
+				<p>
+					<img src="images/eRequest_RequestsInProgress.png" alt="The listing of Requests in progress"/>					
+				</p>
+				<div class="ScreenshotCaption">The listing of Requests in progress</div>
+				
+				<p>
+					<img src="images/eRequest_RequestDetail.png" alt="The listing of Requests in progress"/>					
+				</p>
+				<div class="ScreenshotCaption">The request detail screen</div>
+								
+				<p>
+					<img src="images/eRequest_reports.png" alt="One of the reports"/>					
+				</p>
+				<div class="ScreenshotCaption">One of the reports</div>
+
+            </div>
+
+            <div id="footer">
+                <p>Great care has been taken to deliver a <a href="http://validator.w3.org/check/referer">standards compliant document</a> to your browser.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
