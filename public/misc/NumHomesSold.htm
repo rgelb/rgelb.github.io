@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Number of Homes Sold</title>
+        <link rel="stylesheet" href="NumHomesSold_files/xw-widgets-global.css">
+        <link rel="stylesheet" href="NumHomesSold_files/xw-number-of-homes-sold.css">
+    <style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+    <body class="xw-sample-body">
+
+        
+<style>
+/*
+Styles emulating a scenario where our widget is placed.
+These are not part of the widget itself.
+*/
+.xw-sample-body {
+  font-family: Arial;
+  margin: 20px;
+  padding: 0;
+}
+
+.xw-sample-container {
+  border: 1px solid #666;
+  font-family: Arial;
+  margin: 0 auto;
+  max-width: 800px;
+}
+</style>
+
+  <!-- START: actual widget -->
+  <!--
+  Add class "xw-expanded" to show widgets contents by default.
+  Add class "xw-show-legalese" to show legal verbiage below.
+  -->
+  <div class="xw-wrapper xw-wrapper-number-of-homes-sold xw-expanded xw-show-legalese js-xw-wrapper js-xw-wrapper-number-of-homes-sold xw-widget-fully-loaded" data-break-small="600" data-default-range="2">
+    <div class="xw-header">
+      <div class="xw-header-text">
+        <span class="xw-header-text-primary">Number of Homes Sold</span>
+        <span class="xw-header-text-secondary">
+          in <span class="xw-capitalize">92649</span>
+        </span>
+      </div>
+
+      <div class="xw-expand-collapse js-xw-expand-collapse"></div>
+    </div>
+
+    <div class="xw-contents xw-clearfix">
+      <div class="xw-visualization-description">
+        This chart tells you how many homes have sold in the selected area over time. 
+        You can view home sales patterns by selecting different time periods which may 
+        highlight trends and changes in the supply and/or demand for homes in this area.
+      </div>
+
+      <ul class="xw-range-selector">
+        <li class="xw-range-item xw-range-label">
+          Past:
+        </li>
+        <li class="xw-range-item js-xw-range-item" data-range="5">
+          5y
+        </li>
+        <li class="xw-range-item js-xw-range-item xw-active" data-range="2">
+          2y
+        </li>
+        <li class="xw-range-item js-xw-range-item" data-range="1">
+          1y
+        </li>
+      </ul>
+
+      <div class="xw-number-of-homes-sold-graph js-xw-number-of-homes-sold-graph" data-street-address="" data-zip-code="92649" data-api-url="http://rwx-web-oc2-q01:81/api/widgets/">
+        <div id="xw-chart-wrapper-number-of-homes-sold" class="xw-chart-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+          <div class="xw-chart-loader-container js-xw-chart-loader-container-number-of-homes-sold" style="display: none;">
+            <div class="xw-chart-loader"></div>
+          </div>
+          <canvas id="xw-chart-container-number-of-homes-sold" class="xw-chart-container chartjs-render-monitor" style="display: block; width: 1868px; height: 250px;" width="1868" height="250"></canvas>
+        </div>
+
+        <!-- Display error message when the chart cannot be loaded. -->
+        <div id="xw-error-block-number-of-homes-sold" class="xw-error-block">
+          <div class="xw-error-message">
+            Data could not be loaded.
+          </div>
+        </div>
+      </div>
+
+      <div class="xw-legalese xw-standard-copy xw-clearfix">
+        <div>
+          <img class="xw-xome-logo" src="NumHomesSold_files/logo-xome-gray.png" alt="Xome logo">
+          © Xome Inc. 2019. All rights reserved. Analytics by Quantarium.
+        </div>
+      </div>
+    </div><!-- .xw-contents -->
+  </div><!-- .xw-wrapper -->
+  <!-- END: actual widget -->
+
+
+        <script src="NumHomesSold_files/jquery.js"></script>
+        <script src="NumHomesSold_files/xw-chart.js"></script>
+        <script src="NumHomesSold_files/xw-widgets-global.js"></script>
+        <script src="NumHomesSold_files/xw-number-of-homes-sold.js"></script>
+
+    
+
+</body></html>
