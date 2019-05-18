@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrations - Widgets.UI</title>
+
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
+<meta name="x-stylesheet-fallback-test" content="" class="sr-only" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="'+c[e]+'" '+d+"/>")}("position","absolute",["\/lib\/bootstrap\/dist\/css\/bootstrap.min.css"], "rel=\u0022stylesheet\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=\u0022 ");</script>
+  
+
+  
+  <style>
+    .spacer-50 {
+      margin-bottom: 50px
+    }
+        
+    /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+    for details on configuring this project to bundle and minify static web assets. */
+
+    a.navbar-brand {
+      white-space: normal;
+      text-align: center;
+      word-break: break-all;
+    }
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      font-size: 14px;
+    }
+    @media (min-width: 768px) {
+      html {
+        font-size: 16px;
+      }
+    }
+
+    .border-top {
+      border-top: 1px solid #e5e5e5;
+    }
+    .border-bottom {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+      box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+
+    button.accept-policy {
+      font-size: 1rem;
+      line-height: inherit;
+    }
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      white-space: nowrap;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      line-height: 60px; /* Vertically center the text there */
+    }
+    
+    
+  </style>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          Widgets Logo
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+          <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/HomeValuationEstimate">HV Estimate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/HomeValuationHistory">HV History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/HomeValuationCombo">HV Combo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/PropertyFacts">Prop Facts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/ComparableHomeSales">Comp Homes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/MedianSalesPriceSqft">Median Sales Price</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/NumberOfHomesSold">Num Homes Sold</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/SupplyAndDemand">Supply &amp; Demand</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/MonthsOfSupply">Months of Supply</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/PriceHistory">Price History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/TaxHistory">Tax History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/SamplePage">Integration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/SamplePageCombo">Integration Combo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/SampleImages">Images</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Widgets/ImageCombinations">Image Combinations</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    
+
+
+    <main role="main" class="pb-3">
+      
+
+
+<div class="spacer-50">
+  <h2 id="address">5361 Doverton Dr, 92649</h2>
+
+  <label for="txtStreetAddress">Street Address</label>
+  <input type="text" id="txtStreetAddress" value="7636 Park Path Dr" />
+
+  <label for="txtZip">Zip</label>
+  <input type="text" id="txtZip" value="92648" />
+
+  <label for="chkStartCollapsed">Start Collapsed?</label>
+  <input type="checkbox" id="chkStartCollapsed" />
+
+  <button id="btnRefresh">Refresh</button>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="widgetHomeValuationEstimate" style="width: 100%"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="widgetHomeValuationHistory" style="width: 100%"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="widgetPropertyFacts" style="width: 100%"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="widgetComparableHomeSales" style="width: 100%"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="widgetMedianSalesPriceSqft" style="width: 100%"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="widgetNumberOfHomesSold" style="width: 100%"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="widgetSupplyAndDemand" style="width: 100%"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="widgetMonthsOfSupply" style="width: 100%"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="widgetPriceHistory" style="width: 100%"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="widgetTaxHistory" style="width: 100%"></div>
+    </div>
+  </div>
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer class="border-top footer text-muted">
+    <div class="container">
+      &copy; 2019 - Widgets.UI - <a href="">Privacy</a>
+    </div>
+  </footer>
+
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+    </script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022\/lib\/jquery\/dist\/jquery.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha256-FgpCb\/KJQlLNfOu91ta32o\/NMZxltwRo8QtmkMRdAu8=\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+    </script>
+<script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal||document.write("\u003Cscript src=\u0022\/lib\/bootstrap\/dist\/js\/bootstrap.bundle.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha256-E\/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ\/PR7CA4=\u0022\u003E\u003C\/script\u003E"));</script>
+  
+
+  
+
+  
+    <script src="//qa.xomewidgets.com/js/xw-integration.js?v=66U8tubw9OvfZmoSOiotZ-qrWPXuKuMF8CrS1KbAr9k"></script>
+  
+  
+
+  <script type="text/javascript">
+
+    var xomeWidgets = new WidgetsIntegration();
+
+    $(document).ready(function () {
+
+      var options = {
+        streetAddress: '5361 Doverton Dr',
+        zip: '92649'
+      };
+
+      loadWidgets(options);
+    });
+
+    $('#btnRefresh').on('click', function () {
+      var streetAddress = $("#txtStreetAddress").val();
+      var zip = $("#txtZip").val();
+      var startCollapsed = $("#chkStartCollapsed").prop('checked');
+
+      var options = {
+        streetAddress: streetAddress,
+        zip: zip
+      };
+
+      if (startCollapsed) {
+        options.startCollapsed = true;
+      }
+
+      xomeWidgets.clear();
+      loadWidgets(options);
+      $('#address').html(streetAddress + ', ' + zip);
+
+    });
+
+    function loadWidgets(options) {
+      xomeWidgets.load('HomeValuationEstimate', 'widgetHomeValuationEstimate', options);
+      xomeWidgets.load('HomeValuationHistory', 'widgetHomeValuationHistory', options);
+      xomeWidgets.load('PropertyFacts', 'widgetPropertyFacts', options);
+      xomeWidgets.load('ComparableHomeSales', 'widgetComparableHomeSales', options);
+      xomeWidgets.load('MedianSalesPriceSqft', 'widgetMedianSalesPriceSqft', options);
+      xomeWidgets.load('NumberOfHomesSold', 'widgetNumberOfHomesSold', options);
+      xomeWidgets.load('SupplyAndDemand', 'widgetSupplyAndDemand', options);
+      xomeWidgets.load('MonthsOfSupply', 'widgetMonthsOfSupply', options);
+      xomeWidgets.load('PriceHistory', 'widgetPriceHistory', options);
+      xomeWidgets.load('TaxHistory', 'widgetTaxHistory', options);
+    }
+
+
+  </script>
+
+
+</body>
+</html>
