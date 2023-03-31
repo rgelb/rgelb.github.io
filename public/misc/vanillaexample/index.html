@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repro</title>
+    <link href="vanilla-calendar.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="events-calendar" style="margin: 50px;"></div>
+    
+
+    <script type="module" src="vanilla-calendar.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+
+            let calendar = new VanillaCalendar('#events-calendar', {
+                CSSClasses: {
+                    calendar: 'vanilla-calendar',
+                    header: 'vanilla-calendar-header',
+                    headerContent: 'vanilla-calendar-header__content',
+                    days: 'vanilla-calendar-days',
+                },
+                date: {
+                    min: '2023-03-31',
+                    max: '2025-03-31'
+                },
+
+                actions: {
+                    clickDay: (event, dates) => {
+                        console.log(event.target.dataset.calendarDay);
+                    },
+                    clickArrow: (event, year, month) => {
+                        console.log(year, month);
+                    },
+                },
+            });         
+
+            let justDates = [ "2023-04-06", "2023-04-12", "2023-04-13", 
+                    "2023-04-14", "2023-04-18", "2023-04-19", "2023-04-20", 
+                    "2023-04-24", "2023-04-25", "2023-04-26", "2023-04-27", "2023-04-28"];
+
+            calendar.settings.selected.dates = justDates;
+            calendar.settings.range.enabled = justDates;
+            calendar.settings.visibility.disabled = true;
+            calendar.settings.range.disableAllDays = true;
+            calendar.settings.selection.day = "multiple";
+
+            calendar.init();
+
+        });
+    </script>
+</body>
+</html>

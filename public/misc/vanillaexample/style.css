@@ -1,0 +1,89 @@
+
+.vanilla-calendar {
+    border: solid 1px #21355a;
+    border-radius: 0;
+    padding: 0;
+    max-width: 570px;
+    /*max-width: 450px;*/
+    padding-bottom: 1px;
+}
+
+.vanilla-calendar-header {
+    background-color: #21355a;
+    height: 54px;
+    margin-bottom: 0;
+}
+
+.vanilla-calendar-header__content {
+    color: white !important
+}
+
+.vanilla-calendar-month, .vanilla-calendar-year {
+    color: white;
+    font-size: 22px;
+    line-height: 21px;
+    font-family: ProximaNova-Reglar;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+}
+
+.vanilla-calendar-arrow {
+    background-color: #21355a;
+}
+
+    .vanilla-calendar-arrow::before {
+        background-color: #d1a326;
+    }
+
+.vanilla-calendar-week__day {
+    background-color: #d1a326;
+    color: white;
+    height: 27px;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.vanilla-calendar-week {
+    margin-bottom: 0;
+}
+
+.vanilla-calendar-days {
+    row-gap: 0;
+}
+
+
+.vanilla-calendar-day {
+    height: 36px;
+}
+
+.vanilla-calendar-day__btn {
+    background-color: white;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: ProximaNova-Reglar;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.vanilla-calendar-day__btn_weekend {
+    color: red;
+}
+
+.vanilla-calendar-day__btn_prev, .vanilla-calendar-day__btn_next {
+    color: lightgray;
+}
+
+.vanilla-calendar-day__btn_today {
+    color: #06b6d4;
+}
+
+.vanilla-calendar-day__btn_selected {
+    color: white;
+    /*background-color: #d1a326;*/
+    background-color: #21355a;
+    border-radius: .5rem;
+    margin: 5px;
+}
