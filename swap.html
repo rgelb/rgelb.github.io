@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Items on Each Side of Equal Sign</title>
+</head>
+<body>
+
+<textarea id="txtSource" rows="20" cols="40">
+</textarea>
+
+<button id="btnSwap">Swap</button>
+
+<textarea id="txtTarget" rows="20" cols="40">
+</textarea>
+
+<script>
+    "option strict";
+
+    document.getElementById('btnSwap').addEventListener('click', () => {
+        let sourceText = document.getElementById('txtSource').value;
+
+        var lines = sourceText.split("\n");
+        var result = [];
+
+        lines.forEach(line => {            
+            var parts = line.split('=');
+            if (parts.length === 2) {
+                var leftSide = parts[0];
+                var rightSide = parts[1];
+
+                const swapped = `${rightSide} = ${leftSide}`;
+                result.push(swapped);
+            } else {
+                result.push(line);
+            }
+        });
+
+        document.getElementById('txtTarget').value = result.join('\n');;
+
+    });
+
+</script>
+
+
+</body>
+</html>
