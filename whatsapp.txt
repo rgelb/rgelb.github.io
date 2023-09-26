@@ -1,0 +1,4 @@
+I don't actually have a business.  All I want is to send a message to my Whatsapp account when the laundry dryer in the garage is done.  This is done by analyzing power consumption - when it drops to zero I know the dryer has finished work.
+The code to do all this is sitting on a Rapsberry Pi device.  
+
+That is all I want to do.  There is no interacting with customers or anything like that - just sending a message to myself when laundry is done.
